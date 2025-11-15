@@ -2,8 +2,7 @@
 //Приймає масив data (наприклад, список задач).
 
 //функція appendItem створює новий <li> елемент.
-// const container = document.querySelectorAll(".activity");
-// console.log(container);
+
 const list = document.querySelector(".activity");
 
 // Період, який зараз активний (може бути: daily, weekly, monthly)
@@ -36,10 +35,9 @@ const appendItem = (item) => {
 
   // Беремо потрібний період
   const current = timeframes[currentPeriod].current;
-  console.log("current= ", current, "currentPeriod= ", currentPeriod);
 
   const previous = timeframes[currentPeriod].previous;
-  console.log("previous= ", previous);
+
   //Формуємо клас для фону (work, play, study...)
   const typeClass = title.toLowerCase().replace(" ", "-");
 
@@ -53,7 +51,7 @@ const appendItem = (item) => {
   li.innerHTML = `
   <img
     class="activity-image"
-    src="/assets/images/icon-${typeClass}.svg"
+    src="assets/images/icon-${typeClass}.svg"
    alt="${title}"
     width="78"
     height="78"
@@ -63,7 +61,7 @@ const appendItem = (item) => {
       <p class="act-name middle-text">${title}</p>
       <img
         class="ellipsis"
-        src="/assets/images/icon-ellipsis.svg"
+        src="assets/images/icon-ellipsis.svg"
         alt="Ellipsis"
         width="21"
         height="5"
