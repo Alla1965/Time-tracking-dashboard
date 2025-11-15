@@ -1,0 +1,300 @@
+@import url("tokens.css");
+body {
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 0px;
+  color: var(--color-white);
+}
+p,
+h1 {
+  margin: 0;
+}
+body {
+  background-color: var(--color-black);
+}
+.small-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-navy-200);
+}
+.middle-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--color-purple-500);
+}
+.work {
+  background-color: var(color-orange-300);
+}
+.play {
+  background-color: var(--color-blue-300);
+}
+.study {
+  background-color: var(--color-pink-400);
+}
+.exercise {
+  background-color: var(--color-green-400);
+}
+.social {
+  background-color: var(--color-purple-700);
+}
+.self-care {
+  background-color: var(--color-yellow-300);
+}
+.container {
+  height: 1307px;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 81px 24px;
+  background-color: var(--color-blue-700);
+}
+@media (min-width: 768px) {
+  .container {
+    width: 612px;
+    height: 677px;
+    margin: 173px auto;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1116px;
+    height: 520px;
+    margin: 252px auto;
+    display: flex;
+  }
+}
+/* =====HERO====== */
+.hero {
+  width: 327px;
+  height: 203px;
+  background-color: var(--color-navy-900);
+  border-radius: 15px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.name {
+  margin: 0 auto;
+  width: 263px;
+  height: 64px;
+  background-color: var(--color-purple-600);
+  border-radius: 15px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .hero {
+    width: 612px;
+    height: 203px;
+    /* margin-bottom: 0; */
+  }
+  @media (min-width: 1440px) {
+    .hero {
+      width: 255px;
+      height: 520px;
+      margin-bottom: 0;
+    }
+  }
+  .name {
+    width: 548px;
+    margin: 0;
+    justify-items: left;
+  }
+}
+@media (min-width: 1440px) {
+  .name {
+    width: 191px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+}
+.hero-par {
+  width: 172px;
+}
+.name-div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.list-period {
+  width: 327px;
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+}
+@media (min-width: 1440px) {
+  .list-period {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin: 0;
+    padding: 28px 32px;
+
+    /* text-align: left; */
+  }
+}
+.title-name {
+  min-width: 170px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+}
+@media (min-width: 1440px) {
+  .title-name {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+/* Прибираємо стандартний вигляд radio */
+.period-item {
+  display: none;
+}
+
+.list-period label:has(input:checked) {
+  color: var(--color-white);
+}
+/* =====ACTIVITY====== */
+.activity {
+  width: 327px;
+  height: 1080px;
+  /* justify-content: center; */
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .activity {
+    width: 612px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 188px);
+    grid-template-rows: 213px 213px;
+  }
+}
+@media (min-width: 1440px) {
+  .activity {
+    width: 829px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
+    grid-template-rows: 244px 244px;
+    gap: 32px;
+  }
+  .work {
+    grid-area: 1/1/2/2;
+  }
+  .play {
+    grid-area: 1/2/2/3;
+  }
+  .study {
+    grid-area: 1/3/2/4;
+  }
+  .exercise {
+    grid-area: 2/1/3/2;
+  }
+  .social {
+    grid-area: 2/2/3/3;
+  }
+  .self-care {
+    grid-area: 2/3/3/4;
+  }
+}
+.activity-item {
+  width: 100%;
+  height: 213px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  .activity-item {
+    /* width: 100%; */
+    height: 244px;
+    /* border-radius: 15px;
+  position: relative;
+  overflow: hidden; */
+  }
+}
+.work {
+  position: relative;
+  background-color: #ff8b64;
+}
+.activity-image {
+  position: absolute;
+  top: -10px;
+  right: 17px;
+  object-fit: cover;
+}
+.times {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-navy-900);
+  border-radius: 15px;
+  padding: 27.5px 24px;
+}
+@media (min-width: 768px) {
+  .times {
+    width: 188px;
+    height: 132px;
+    padding: 24px 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .times {
+    width: 100%;
+    height: 137px;
+    padding: 31px 30px;
+  }
+}
+.act-title {
+  display: flex;
+  width: 279px;
+  justify-content: space-between;
+  align-items: center;
+}
+.hours {
+  width: 279px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .hours {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 16px;
+  }
+}
+.hours-now {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 38px;
+}
+@media (min-width: 768px) {
+  .hours-now {
+    font-size: 56px;
+    line-height: 66px;
+    margin-bottom: 16px;
+  }
+}
+.last {
+  text-align: right;
+}
