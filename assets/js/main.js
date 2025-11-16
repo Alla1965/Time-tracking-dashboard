@@ -12,6 +12,7 @@ let currentPeriod = "weekly";
 const lastingRadios = document.querySelectorAll(
   ".period-label input[type='radio']"
 );
+console.log(lastingRadios);
 
 // Змінна для збереження всіх даних з data.json
 let allData = [];
